@@ -4,6 +4,7 @@
       <div class="card card-block">
         <h4 class="card-title"><%= link_to @tweet.user.username, user_path(@tweet.user.username) %></h4>
         <p class="card-title"><%= @tweet.content %></p>
+        <%= image_tag @tweet.image, class: "img-fluid" %>
         <% if @tweet.user == current_user %>
           <%= link_to 'Edit', edit_tweet_path(@tweet), class: "card-link" %>
           <%= link_to 'Delete', @tweet, method: :delete, class: "card-link" %>
