@@ -1,34 +1,42 @@
 <%if user_signed_in? %>
   <div class="jumbotron jumbotron-home">
     <div class="container">
-        <h1>Welcome Back dude!</h1>
+        <h1>Welcome Back Friend!</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <p align="right"><%= link_to "&", admin_root_path, target: :_blank %></p>
     </div>
   </div>
 <% else %>
   <div class="jumbotron jumbotron-home">
     <div class="container">
-          <h1>Welcome to my website!</h1>
-          <p>This is a template for a simple website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <h1>Welcome to my Rails site!</h1>
+          <p>This is a website created in rails 5, in order to test and learn developing web services with Ruby On Rails, Heroku, and other languages I'm learning.</p>
           <%= link_to "Learn more »", "#", class: "btn btn-primary btn-lg" %>
     </div>
   </div>
   <div class="container">
       <div class="row">
           <div class="col-md-4">
-              <h2>Heading</h2>
+              <h2>Tweets Example</h2>
               <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><%= link_to "View details", "#", class: "btn btn-secondary" %></p>
+              <p><%= link_to "View project", tweets_path, class: "btn btn-secondary" %></p>
           </div>
           <div class="col-md-4">
-              <h2>Heading</h2>
+              <h2>Items Example</h2>
               <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><%= link_to "View details", "#", class: "btn btn-secondary" %></p>
+              <p><%= link_to "View project", items_path, class: "btn btn-secondary" %></p>
           </div>
           <div class="col-md-4">
-              <h2>Heading</h2>
+              <h2>Feed Example</h2>
               <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><%= link_to "View details", "#", class: "btn btn-secondary" %></p>
+              <p><%= link_to "View project", feed_path, class: "btn btn-secondary" %></p>
           </div>
+      </div>
+      <div>
+        <p align="right"><%= link_to "&", admin_root_path, target: :_blank %></p>
       </div>
   </div>
 <% end  %>
